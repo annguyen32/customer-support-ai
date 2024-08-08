@@ -3,9 +3,8 @@ import { useRouter } from "next/navigation";
 
 import { Box, Button, Stack, TextField } from "@mui/material";
 import { useState } from "react";
-import Sidebar from "./dashboard/Sidebar";
 
-export default function Home() {
+export default function Page() {
   const router = useRouter();
   const [messages, setMessages] = useState([
     {
@@ -77,10 +76,6 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
     >
-      <Sidebar />
-      <button type="button" onClick={() => router.push("/dashboard")}>
-        Dashboard
-      </button>
       <Stack
         direction={"column"}
         width="500px"
