@@ -1,11 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
-
+import { Links } from "./dashboard/links";
 import { Box, Button, Stack, TextField } from "@mui/material";
 import { useState } from "react";
 import Sidebar from "./dashboard/Sidebar";
+import Home from "./home/page";
 
-export default function Home() {
+export default function App() {
   const router = useRouter();
   const [messages, setMessages] = useState([
     {
@@ -77,7 +78,7 @@ export default function Home() {
       justifyContent="center"
       alignItems="center"
     >
-      <Sidebar />
+      <Links />
       <button type="button" onClick={() => router.push("/dashboard")}>
         Dashboard
       </button>

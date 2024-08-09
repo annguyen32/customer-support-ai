@@ -76,6 +76,9 @@ export default function Page() {
       justifyContent="center"
       alignItems="center"
     >
+      <button type="button" onClick={() => router.back()}>
+        Click here to go back
+      </button>
       <Stack
         direction={"column"}
         width="500px"
